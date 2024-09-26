@@ -119,7 +119,7 @@ def get_digital_currency_addresses():
             
             # Step 6: Write unrecognized wallets if any
             if unrecognized_wallets:
-                unrecognized_file = "OFAC_Sanctioned_Wallet_Lists/Unrecognized_Blockchain_Sanctioned_Wallet_List.txt"
+                unrecognized_file = f"OFAC_Sanctioned_Wallet_Lists/{index}_Unrecognized_Blockchain_Sanctioned_Wallet_List.txt"
                 print(f"Attempting to write to {unrecognized_file}...")  # Debugging output
                 with open(unrecognized_file, "w") as f:
                     # Write the "Last Updated" timestamp
