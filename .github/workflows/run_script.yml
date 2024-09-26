@@ -31,6 +31,6 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add OFAC\ Sanctioned\ Wallet\ Lists/
-        git commit -m "Update OFAC Sanctioned Wallet List with the latest results"
+        git add OFAC_Sanctioned_Wallet_Lists/
+        git commit -m "Update OFAC_Sanctioned_Wallet_Lists with the latest results"
         git push
