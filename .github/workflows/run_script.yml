@@ -24,7 +24,7 @@ jobs:
         pip install requests
 
     - name: Run the OFAC wallet checker script
-      run: python Scripts/sdn-list-pull.py   # Ensure you're using the correct folder for the script
+      run: python scripts/sdn-list-pull.py   # Ensure you're using the correct folder for the script
 
     # Commit and push updated sanctioned wallet lists
     - name: Commit and push updated OFAC sanctioned wallet lists
