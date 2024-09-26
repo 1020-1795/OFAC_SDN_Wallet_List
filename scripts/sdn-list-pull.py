@@ -93,7 +93,7 @@ def get_digital_currency_addresses():
                         unrecognized_wallets.append(wallet_address)
             
             # Step 4: Write the Complete Sanctioned Wallet List
-            complete_list_file = "OFAC Sanctioned Wallet Lists/1_Complete_Sanctioned_Wallet_List.txt"
+            complete_list_file = "OFAC_Sanctioned_Wallet_Lists/1_Complete_Sanctioned_Wallet_List.txt"
             print(f"Attempting to write to {complete_list_file}...")  # Debugging output
             with open(complete_list_file, "w") as f:
                 # Write the "Last Updated" timestamp
@@ -106,7 +106,7 @@ def get_digital_currency_addresses():
             # Step 5: Write individual blockchain files (only for blockchains with wallets)
             index = 2
             for blockchain, addresses in blockchain_wallets.items():
-                blockchain_file_name = f"OFAC Sanctioned Wallet Lists/{index}_{blockchain}_Sanctioned_Wallet_List.txt"
+                blockchain_file_name = f"OFAC_Sanctioned_Wallet_Lists/{index}_{blockchain}_Sanctioned_Wallet_List.txt"
                 print(f"Attempting to write to {blockchain_file_name}...")  # Debugging output
                 with open(blockchain_file_name, "w") as f:
                     # Write the "Last Updated" timestamp
@@ -119,7 +119,7 @@ def get_digital_currency_addresses():
             
             # Step 6: Write unrecognized wallets if any
             if unrecognized_wallets:
-                unrecognized_file = "OFAC Sanctioned Wallet Lists/Unrecognized_Blockchain_Sanctioned_Wallet_List.txt"
+                unrecognized_file = "OFAC_Sanctioned_Wallet_Lists/Unrecognized_Blockchain_Sanctioned_Wallet_List.txt"
                 print(f"Attempting to write to {unrecognized_file}...")  # Debugging output
                 with open(unrecognized_file, "w") as f:
                     # Write the "Last Updated" timestamp
